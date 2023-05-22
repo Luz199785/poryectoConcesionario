@@ -1,20 +1,36 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
 }
 .container-ul {
-    width: 100vw;
-    height: 15vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #ffa5a5;
+    
+  display: inline-block;
+  width: 100%;
+  background-color: #8f2bad;
+  padding: .5em 1em;
+  color: #444;
+  font-family: inherit;
+  font-size: 100%;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid #8a18b8;
+  border: transparent;
+  border-radius: 2px;
+  margin: 3px;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;      
 }
 
 h1 {
-    text-align: right;
-    color: #ffffff;
+    text-align: center;
+    color: #0f0303;
+    font-family: "italic", Verdana, sans-serif;
 }
 
 ul {
@@ -31,11 +47,11 @@ ul li{
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: #ddd6d6;
     font-size: 1.3rem;
     font-weight: 400;
 }
 
 li:hover{
-    text-decoration: underline 4px #ffffff;
+    text-decoration: underline 4px #300eca;
 }

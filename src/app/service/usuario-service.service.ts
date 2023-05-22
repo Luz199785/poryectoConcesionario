@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
+import { ResponseI } from '../model/response-i';
 
 
 const urlBase = "http://localhost:8080/usuarios";
@@ -11,7 +13,18 @@ export class UsuarioServiceService {
 
   constructor(private http : HttpClient) { }
 
-  getAllUsers() {
-    return this.http.get<any>(urlBase + "/all")
+  getAllUsers(): Observable<ResponseI> {
+    return this.http.get<ResponseI>(urlBase + "/all")
+  }
+  crearUsuario(data:any): Observable<ResponseI> {
+    return this.http.post<ResponseI>(urlBase + "/create", data);
+  }
+
+  actualizarUsuario(data:any): Observable<ResponseI> {
+    return this.http.put<ResponseI>(urlBase + "/update", data);
+  }
+
+  eliminarUsuario(data:number): Observable<ResponseI> {
+    return this.http.get<ResponseI>(urlBase + "/delete/" + data);
   }
 }

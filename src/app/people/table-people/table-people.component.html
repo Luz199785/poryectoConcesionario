@@ -11,6 +11,8 @@
           <th>Identificacion</th>
           <th>Telefono</th>
           <th>Direccion</th>
+          <th>Borrar</th>
+          
         </tr>
       </thead>
       
@@ -25,6 +27,7 @@
           <td>{{ user.identificacion }}</td>
           <td>{{ user.telefono }}</td>
           <td>{{ user.direccion }}</td>
+          <th><button (click)="eliminarUsuario(user.idUsuario)">Borrar</button></th>
         </tr>
       </tbody>
   
